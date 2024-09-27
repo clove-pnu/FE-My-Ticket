@@ -1,7 +1,7 @@
 export interface ReservedTicket {
   id: number;
-  eventDate: string;
-  reservedDate: string;
+  eventTime: string;
+  purchaseTime: string;
   seatNumber: number;
   eventName: string;
   price: number;

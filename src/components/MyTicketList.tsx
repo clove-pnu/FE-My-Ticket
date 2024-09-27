@@ -12,8 +12,8 @@ export default function MyTicketList({ tickets }: MyTicketListProps) {
       <ul className={styles.ticketList}>
         {tickets.map(({
           id,
-          eventDate,
-          reservedDate,
+          eventTime,
+          purchaseTime,
           seatNumber,
           eventName,
           price,
@@ -25,8 +25,8 @@ export default function MyTicketList({ tickets }: MyTicketListProps) {
           >
             <MyTicket
               id={id}
-              eventDate={eventDate}
-              reservedDate={reservedDate}
+              eventTime={eventTime}
+              purchaseTime={purchaseTime}
               seatNumber={seatNumber}
               eventName={eventName}
               price={price}

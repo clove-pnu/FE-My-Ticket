@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const myTicketInstance = axios.create({
-  baseURL: '/tickets',
+  baseURL: '/default/ticket',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
