@@ -1,4 +1,5 @@
 import { getAccessToken } from '../utils/token';
+import { ReservedTicket } from '../utils/type';
 import { myTicketInstance } from './instance';
 
 export function getMyTickets() {
@@ -9,27 +10,9 @@ export function getMyTickets() {
   });
 }
 
-export function cancelTicket({
-  eventName,
-  section,
-  seatNumber,
-  price,
-  eventTime,
-}: {
-  eventName: string;
-  section: string;
-  seatNumber: number;
-  price: number;
-  eventTime: string;
-}) {
-  return myTicketInstance.delete('/cancel', {
-    data: {
-      eventName,
-      section,
-      seatNumber,
-      price,
-      eventTime,
-    },
+export function refundTicket(ticket: ReservedTicket) {
+  return myTicketInstance.delete('/refund', {
+    data: ticket,
     headers: {
       Authorization: getAccessToken(),
     },
