@@ -11,7 +11,7 @@ export default function MyTicketPage() {
   useEffect(() => {
     fetchWithHandler(() => getMyTickets(), {
       onSuccess: (response) => {
-        setTicketList(response.data);
+        setTicketList(response.data.reverse());
       },
       onError: () => {},
     });

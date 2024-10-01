@@ -57,5 +57,9 @@
   .eventName {
     font-weight: 700;
     font-size: 1.25rem;
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
