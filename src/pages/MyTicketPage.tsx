@@ -6,6 +6,8 @@ import { fetchWithHandler } from '../utils/fetchWithHandler';
 import { getMyTickets } from '../apis/ticket';
 
 export default function MyTicketPage() {
+  document.title = '티켓 관리 | Clove 티켓';
+
   const [ticketList, setTicketList] = useState<ReservedTicket[]>([]);
 
   useEffect(() => {
