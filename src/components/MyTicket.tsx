@@ -28,7 +28,10 @@ export default function MyTicket({
       namespace,
     };
 
-    fetchWithHandler(() => refundTicket(ticketToRefund), {
+    fetchWithHandler(() => refundTicket({
+      namespace,
+      ticket: ticketToRefund,
+    }), {
       onSuccess: (response) => {
         console.log(response);
         alert('예매 취소가 완료되었습니다.');
